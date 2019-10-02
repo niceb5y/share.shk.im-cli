@@ -1,0 +1,27 @@
+{
+  "name": "share",
+  "version": "1.0.0",
+  "main": "bin/index.js",
+  "bin": "bin/index.js",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "aws-sdk": "^2.503.0",
+    "chalk": "^2.4.2",
+    "commander": "^2.20.0",
+    "dotenv": "^8.0.0",
+    "shortid": "^2.2.14"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^6.1.1",
+    "@types/node": "^12.7.9",
+    "@types/shortid": "^0.0.29",
+    "babel-preset-typescript": "^7.0.0-alpha.19",
+    "prettier": "^1.18.2",
+    "typescript": "^3.6.3"
+  },
+  "scripts": {
+    "build": "tsc -p .",
+    "watch": "tsc -w -p ."
+  }
+}
