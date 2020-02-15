@@ -43,7 +43,7 @@ const addFile = (S3: AWS.S3, DocClient: AWS.DynamoDB.DocumentClient) => async (
         filename: encodeURI(basename),
         hash: crypto
           .createHash('sha256')
-          .update(fs.readFileSync(resolvedFilePath, 'utf8'), 'utf8')
+          .update(fs.readFileSync(resolvedFilePath))
           .digest('hex'),
         date: Math.floor(+new Date() / 1000)
       }
