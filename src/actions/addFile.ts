@@ -6,6 +6,7 @@ import child_process from 'child_process'
 
 import chalk from 'chalk'
 import shortid from 'shortid'
+import filesize from 'filesize'
 
 const addFile = (S3: AWS.S3, DocClient: AWS.DynamoDB.DocumentClient) => async (
   filePath: string
@@ -45,7 +46,8 @@ const addFile = (S3: AWS.S3, DocClient: AWS.DynamoDB.DocumentClient) => async (
           .createHash('sha256')
           .update(fs.readFileSync(resolvedFilePath))
           .digest('hex'),
-        date: Math.floor(+new Date() / 1000)
+        date: Math.floor(+new Date() / 1000),
+        size: filesize(fs.statSync(resolvedFilePath).size)
       }
     }).promise()
   } catch {

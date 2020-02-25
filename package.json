@@ -10,6 +10,7 @@
     "chalk": "^2.4.2",
     "commander": "^2.20.0",
     "dotenv": "^8.0.0",
+    "filesize": "^6.1.0",
     "shortid": "^2.2.14"
   },
   "devDependencies": {
