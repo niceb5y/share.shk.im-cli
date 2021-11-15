@@ -7,7 +7,7 @@ import process from 'process'
 
 import AWS from 'aws-sdk'
 import dotenv from 'dotenv'
-import program from 'commander'
+import {program} from 'commander'
 
 import addFile from './actions/addFile'
 import removeFile from './actions/removeFile'
